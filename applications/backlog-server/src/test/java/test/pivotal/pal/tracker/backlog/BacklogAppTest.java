@@ -13,7 +13,7 @@ public class BacklogAppTest {
         App.main(new String[]{});
 
         String response = new RestTemplate().getForObject("http://localhost:8181/stories?projectId=0", String.class);
-
+        //String response = "[]";
         assertThat(response).isEqualTo("[]");
     }
 }
